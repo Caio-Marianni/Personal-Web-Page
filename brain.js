@@ -1,4 +1,4 @@
-// DARK MODE SWITCH--------------------------------------------------
+// LIGHT/DARK THEME SWITCH-------------------------------------------
 const $html = document.querySelector('html')
 const $ThemeButton  = document.querySelector('#switch')
 

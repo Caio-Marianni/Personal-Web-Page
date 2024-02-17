@@ -168,7 +168,7 @@ p {
     justify-content: center;
     width: auto;
     height: auto;
-    padding: 16px 128px;
+    padding: 60px 128px 64px 128px;
     background-color: var(--Color30);
     box-shadow: 0px 0px 20px 0px var(--ColorShadow);
     -webkit-box-shadow: 0px 0px 20px 0px var(--ColorShadow);
@@ -176,7 +176,7 @@ p {
 }
 #about .title {
     height: auto;
-    margin: 60px 0 19px 0;
+    margin-bottom: 19px;
     text-align: center;
 }
 #about .title h1 {
@@ -195,7 +195,6 @@ p {
     display: flex;
     width: 60%;
     height: auto;
-    margin-bottom: 68px;
     padding: 50px 50px;
     border-radius: 10px;
     background-color: var(--Color60);
@@ -277,11 +276,11 @@ p {
     justify-content: center;
     width: auto;
     height: auto;
-    padding: 16px 128px;
+    padding: 60px 128px 64px 128px;
 }
 #services .title {
     height: auto;
-    margin: 60px 0 19px 0;
+    margin-bottom: 19px;
     text-align: center;
 }
 #services .title h1 {
@@ -322,40 +321,86 @@ p {
 #services .layout .service-card .text-container p {
     margin: 10px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /* Programming Section--------------------------- */
-#programming {
+#portifolio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: auto;
     height: auto;
-    padding: 16px 128px;
+    padding: 60px 128px 64px 128px;
     background-color: var(--Color30);
 }
-#programming .title {
+#portifolio .title {
     height: auto;
-    margin: 60px 0 60px 0;
+    margin-bottom: 19px;
     text-align: center;
 }
-#programming .title h1 {
+#portifolio .title h1 {
     font-size: 32px;
 }
-#programming .title p {
-    margin-top: 10px;
+#portifolio .title p {
     color: var(--Color30Opacity);
+}
+#portifolio .title .border-container {
+    width: 300px;
+    margin: 10px;
+    border: solid var(--Color10) 1px;
+}
+#portifolio .projectCard {
+    width: 450px;
+    height: auto;
+    border: solid rgb(255, 255, 255) 1px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+}
+#portifolio .projectCard .img-container{
+    width: 100%;
+    height: auto;
+}
+#portifolio .projectCard .img-container a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#portifolio .projectCard .info {
+    width: calc(100% - 40px);
+    height: auto;
+    margin-top: -10px;
+    padding: 30px 20px;
+    color: black;
+}
+#portifolio .projectCard .info p {
+    line-height: 25px;
+}
+#portifolio .projectCard .info button {
+    float: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #cecece;
+}
+#portifolio .projectCard .info button a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+#portifolio .projectCard .info button:hover {
+    background-color: #ffffff;
+}
+
+/* Dj Section------------------------------------ */
+#dj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 60px 128px 64px 128px;
+    background-color: var(--Color30);
 }
 
 
@@ -365,11 +410,6 @@ p {
     height: 40px;
     border-radius: 50px;
     background-color: #ff0000;
-}
-#portifolio {
-    width: 100%;
-    height: 1000px;
-    border: solid purple 2px;
 }
 /* Animations------------------------------------  */
 @keyframes typing {
