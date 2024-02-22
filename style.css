@@ -3,16 +3,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 /* font-family: 'Space Grotesk', sans-serif; */
 /* font-family: 'Montserrat', sans-serif; */
-:root {
-    --Color60: #222831;
-    /* --Color60: #143941; */
-    
-    --Color30: #393E46;
-    /* --Color30: #0d2426; */
 
+/* Anotações-------------------------------------
+Size web desktop (text = 16px)
+1920×1080   (22.18%)
+1366×768      (14.04%)
+1440×900      (6.41%)
+1280×720       (5.45%)
+1280×1024    (4.52%)
+
+Size web mobile (text = 14px)
+360×800   (11.01%)              
+390×844   (7.92%)
+414×896    (5.55%)
+393×873     (5.26)
+412×915      (5%)
+*/
+
+/* animation keyframes--------------------------- */
+@-webkit-keyframes navGradientTrasition {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+@-moz-keyframes navGradientTrasition {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+@-o-keyframes navGradientTrasition {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+@keyframes navGradientTrasition {
+    0%{background-position:19% 0%}
+    50%{background-position:82% 100%}
+    100%{background-position:19% 0%}
+}
+@keyframes animation {
+    0%{background-position:0% 26%}
+    50%{background-position:100% 75%}
+    100%{background-position:0% 26%}
+}
+:root {
+    /* --Color60: #222831; */
+    /* --Color60: #143941; */
+    --Color60: #1a2230;
+    /* --Color60: #181818;  */
+    
+    --Color30: #1b474e;
+    
     /* --Color10: #FD7014; */
     --Color10: #f43d15;
-    /* --Color10: #ff8000; */
     
     --ColorShadow: #00000087;
     --Color30Opacity: rgba(255, 255, 255, 0.5);
@@ -22,7 +65,7 @@
 .light-mode:root {
     --Color60: #e2e2e2;
     --Color30: #414141;
-    --ColorText: #ffffff;
+    --ColorText: #000000;
 }
 * {
     margin: 0;
@@ -44,13 +87,18 @@ p {
 /* Navbar section ------------------------------- */
 #navbar {
     position: fixed;
-    /* Depois de determinado poonto, da essa condção a classe, "positioin fixed", logo apos o Home seection */
     width: 100%;
-    background-color: var(--Color30);
+    background: linear-gradient(210deg, #31425e, #16485a, #31425e);
+    animation: navGradientTrasition 20s ease infinite;
+    -o-animation: navGradientTrasition 20s ease infinite;
+    -moz-animation: navGradientTrasition 20s ease infinite;
+    -webkit-animation: navGradientTrasition 20s ease infinite;
+    background-size: 300% 300%;
     z-index: 1;
-    box-shadow: 0px 0px 20px 0px var(--ColorShadow);
-    -webkit-box-shadow: 0px 0px 20px 0px var(--ColorShadow);
-    -moz-box-shadow: 0px 0px 20px 0px var(--ColorShadow);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    -o-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; 
+    -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 #navbar .text-container {
     padding: 16px 128px;
@@ -158,7 +206,7 @@ p {
     width: 508px;
 }
 #home .text-container .text-writer .word3 {
-    width: 86px;
+    width: 460px;
 }
 /* About Section--------------------------------- */
 #about {
@@ -169,7 +217,11 @@ p {
     width: auto;
     height: auto;
     padding: 60px 128px 64px 128px;
-    background-color: var(--Color30);
+    /* background-color: var(--Color30); */
+    background: linear-gradient(64deg, #0f273d, #1f374d);
+    background-size: 400% 400%;
+
+    animation: animation 10s ease infinite;
     box-shadow: 0px 0px 20px 0px var(--ColorShadow);
     -webkit-box-shadow: 0px 0px 20px 0px var(--ColorShadow);
     -moz-box-shadow: 0px 0px 20px 0px var(--ColorShadow);
@@ -197,10 +249,9 @@ p {
     height: auto;
     padding: 50px 50px;
     border-radius: 10px;
-    background-color: var(--Color60);
-    box-shadow: 0px 0px 20px 0px rgba(130, 130, 130, 0.2);
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(130,130,130,0.2);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(130,130,130,0.2);
+    /* background-color: rgb(37, 63, 88); */
+    background-color: #143941;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 #about .about-card .image-container {
     width: 30%;
@@ -221,7 +272,7 @@ p {
     font-size: 32px;
     color: #ffffff;
 }
-#about .about-card .text-container .border-container {
+#about .about-card .text-container .line {
     width: 50px;
     height: 1px;
     margin-top: 10px;
@@ -310,18 +361,21 @@ p {
     height: 200px;
     border-radius: 5px;
     border: solid black 1px;
-    background-color: var(--Color30);
+    background-color: #1b3d58 ;
+    /* box-shadow: #9090902d 0px 14px 28px, #9090902f 0px 10px 10px; */
 }
 #services .layout .service-card svg {
     margin: 0 30px;
+    color: var(--Color10);
 }
 #services .layout .service-card .text-container {
     margin-right: 30px;
 }
 #services .layout .service-card .text-container p {
+    color: var(--Color30Opacity);
     margin: 10px 0;
 }
-/* Programming Section--------------------------- */
+/* Portifolio Section--------------------------- */
 #portifolio {
     display: flex;
     flex-direction: column;
@@ -330,7 +384,8 @@ p {
     width: auto;
     height: auto;
     padding: 60px 128px 64px 128px;
-    background-color: var(--Color30);
+    background: linear-gradient(64deg, #0f273d, #1f374d);
+    background-size: 400% 400%;
 }
 #portifolio .title {
     height: auto;
